@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth Example</title>
+</head>
+<body>
+  <img src="/MSLogo.svg" alt="Masters Summit Logo" style="height: 60px; margin: 15px;">
+  <div id="sheet1" style="height: calc(100vh - 110px);">
+    <qlik-embed
+      ui="analytics/sheet"
+      app-id="appId"
+      object-id="sheetId"    
+    ></qlik-embed>
+  </div>  
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
+    data-host="yourdomain"
+    data-client-id="clientId"
+    data-redirect-uri="https://localhost:4000/oauth"
+    data-access-token-storage="session"
+  ></script>
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    data-host="yourdomain"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/oauth-callback.min.js"
+  ></script>  
+</body>
+</html>

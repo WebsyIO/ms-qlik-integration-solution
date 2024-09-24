@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qlik Embed Example</title>
+</head>
+<body>
+  <img src="/MSLogo.svg" alt="Masters Summit Logo" style="height: 60px; margin: 15px;">
+  <div id="sheet1" style="height: calc(100vh - 110px);">
+    <qlik-embed
+      ui="analytics/sheet"
+      app-id="appId"
+      object-id="sheetId"    
+    ></qlik-embed>
+  </div>
+  <script
+    crossorigin="anonymous"
+    type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/@qlik/embed-web-components@1/dist/index.min.js"
+    data-host="yourdomain"
+    data-web-integration-id="your integration id"
+    data-cross-site-cookies="true"
+  ></script>
+</body>
+</html>
